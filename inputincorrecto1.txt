@@ -1,0 +1,5 @@
+repetir{
+  imprimir("Hola!");
+  imprimir("¿Cuánto es 2 + 2?");
+  salir;
+} hasta verdadero;
