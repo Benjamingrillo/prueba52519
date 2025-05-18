@@ -1,0 +1,6 @@
+repetir{
+  imprimir("Hola!");
+  imprimir("¿Cómo estás?);
+  salir;
+} hasta Verdadero;
+#no reconoce Verdadero porque comienza con Mayuscula
