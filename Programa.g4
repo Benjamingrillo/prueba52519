@@ -1,20 +1,18 @@
 grammar Programa;
+//gramatica
+programa       : instruccion+   #Programa;
+instruccion    : repeticion     #Instruccion;
 
-programa       : instruccion+ ;   #instruccion
-instruccion    : repeticion ;
+repeticion     : 'repetir' '{' sentencia* '}' 'hasta' condicion ';'     #Repeticion;
+sentencia      : salida | terminar      #Sentencia;
 
-repeticion     : 'repetir' '{' sentencia* '}' 'hasta' condicion ';' ;
-sentencia      : salida | terminar ;
+salida         : 'imprimir' '(' CADENA ')' ';'      #Salida;
+terminar       : 'salir' ';'        #Terminar;
 
-salida         : 'imprimir' '(' CADENA ')' ';' ;
-terminar       : 'salir' ';' ;
+condicion      : 'verdadero' | 'falso'      #Condicion;
 
-condicion      : 'verdadero' | 'falso' ;
 
-// Aquí eliminamos la regla de cadena y caracter como parser rules,
-// y definimos CADENA como token (lexer rule):
-
-// Lexer tokens
+// Lexemas
 CADENA         : '"' (~["\\])* '"' ;
 
 REPETIR       : 'repetir';

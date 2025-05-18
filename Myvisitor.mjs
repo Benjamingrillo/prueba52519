@@ -6,39 +6,37 @@ class Myvisitor extends ProgramaVisitor {
         super();
         this.memory = {}; // Almacén de variables
     }
-
-    visitDecl(ctx) {
-        const varName = ctx.ID().getText();
-        if (ctx.expr()) {
-            this.memory[varName] = this.visit(ctx.expr());
-        }
-        console.log(`Declaración: ${ctx.getChild(0).getText()} ${varName} = ${this.memory[varName] || 'undefined'};`);
+    visitPrograma(ctx) {
+        return ctx.instruccion().map(instr => this.visit(instr));
     }
 
-    visitAssign(ctx) {
-        const varName = ctx.ID().getText();
-        this.memory[varName] = this.visit(ctx.expr());
-        console.log(`${varName} = ${this.memory[varName]};`);
+    visitInstruccion(ctx) {
+    return this.visit(ctx.repeticion());
     }
 
-    visitNumber(ctx) {
-        return Number(ctx.getText());
+    visitRepeticion(ctx) {
+        const instrucciones = ctx.sentencia().map(s => this.visit(s));
+        const condicion = this.visit(ctx.condicion());
+        console.log("Ejecutando bucle hasta que la condición sea:", condicion);
+        instrucciones.forEach(instr => instr());
     }
 
-    visitId(ctx) {
-        return this.memory[ctx.getText()] || 0;
+    visitSentencia(ctx) {
+        if (ctx.salida()) return this.visit(ctx.salida());
+        if (ctx.terminar()) return this.visit(ctx.terminar());
     }
 
-    visitMulDiv(ctx) {
-        const left = this.visit(ctx.expr(0));
-        const right = this.visit(ctx.expr(1));
-        return ctx.op.type === SimpleLangParser.MUL ? left * right : left / right;
+    visitSalida(ctx) {
+        const texto = ctx.CADENA().getText();
+        return () => console.log(texto.slice(1, -1)); // quitar comillas
     }
 
-    visitAddSub(ctx) {
-        const left = this.visit(ctx.expr(0));
-        const right = this.visit(ctx.expr(1));
-        return ctx.op.type === SimpleLangParser.ADD ? left + right : left - right;
+    visitTerminar(ctx) {
+        return () => console.log("Saliendo del programa.");
+    }
+
+    visitCondicion(ctx) {
+        return ctx.getText() === "verdadero";
     }
 }
 

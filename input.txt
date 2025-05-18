@@ -1,5 +1,5 @@
-repetir {
+repetir{}repetir {
   imprimir("Hola!");
-  imprimir("Test?");
+  imprimir("¿Cuánto es 2 + 2?");
   salir;
 } hasta falso;
