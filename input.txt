@@ -1,0 +1,5 @@
+repetir {
+  imprimir("Hola!");
+  imprimir("Test?");
+  salir;
+} hasta falso;
