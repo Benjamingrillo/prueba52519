@@ -1,19 +1,25 @@
 grammar Programa;
 //gramatica
-programa       : instruccion+   #Programa;
-instruccion    : repeticion     #Instruccion;
+programa       : instruccion+ ;
+instruccion    : repeticion ;
 
-repeticion     : 'repetir' '{' sentencia* '}' 'hasta' condicion ';'     #Repeticion;
-sentencia      : salida | terminar      #Sentencia;
+repeticion     : 'repetir' '{' sentencia* '}' 'hasta' condicion ';' ;
+sentencia      : salida | terminar ;
 
-salida         : 'imprimir' '(' CADENA ')' ';'      #Salida;
-terminar       : 'salir' ';'        #Terminar;
+salida         : 'imprimir' '(' CADENA ')' ';' ;
+terminar       : 'salir' ';' ;
 
-condicion      : 'verdadero' | 'falso'      #Condicion;
+condicion      : 'verdadero' | 'falso' ;
 
 
 // Lexemas
-CADENA         : '"' (~["\\])* '"' ;
+CADENA : '"' ([a-zA-Z0-9 .,!?;:])* '"' ;
+
+caracter : letra | digito | simbolo ;
+letra : LETRA ;
+digito : DIGITO ;
+simbolo : SIMBOLO ;
+
 
 REPETIR       : 'repetir';
 IMPRIMIR      : 'imprimir';
@@ -22,12 +28,15 @@ HASTA         : 'hasta';
 VERDADERO     : 'verdadero';
 FALSO         : 'falso';
 
+COMILLAS      : '"';
 LPAREN        : '(' ;
 RPAREN        : ')' ;
 LBRACE        : '{' ;
 RBRACE        : '}' ;
 SEMICOLON     : ';' ;
 
-SIMBOLO       : [.,!?;:] ;
+LETRA   : [a-zA-Z] ;
+DIGITO  : [0-9] ;
+SIMBOLO : [.,!?;:] ;
 
 WS            : [ \t\r\n]+ -> skip ;

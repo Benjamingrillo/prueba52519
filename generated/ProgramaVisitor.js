@@ -48,5 +48,29 @@ export default class ProgramaVisitor extends antlr4.tree.ParseTreeVisitor {
 	}
 
 
+	// Visit a parse tree produced by ProgramaParser#caracter.
+	visitCaracter(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
+	// Visit a parse tree produced by ProgramaParser#letra.
+	visitLetra(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
+	// Visit a parse tree produced by ProgramaParser#digito.
+	visitDigito(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
+	// Visit a parse tree produced by ProgramaParser#simbolo.
+	visitSimbolo(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
 
 }

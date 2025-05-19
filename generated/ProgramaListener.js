@@ -68,5 +68,41 @@ export default class ProgramaListener extends antlr4.tree.ParseTreeListener {
 	}
 
 
+	// Enter a parse tree produced by ProgramaParser#caracter.
+	enterCaracter(ctx) {
+	}
+
+	// Exit a parse tree produced by ProgramaParser#caracter.
+	exitCaracter(ctx) {
+	}
+
+
+	// Enter a parse tree produced by ProgramaParser#letra.
+	enterLetra(ctx) {
+	}
+
+	// Exit a parse tree produced by ProgramaParser#letra.
+	exitLetra(ctx) {
+	}
+
+
+	// Enter a parse tree produced by ProgramaParser#digito.
+	enterDigito(ctx) {
+	}
+
+	// Exit a parse tree produced by ProgramaParser#digito.
+	exitDigito(ctx) {
+	}
+
+
+	// Enter a parse tree produced by ProgramaParser#simbolo.
+	enterSimbolo(ctx) {
+	}
+
+	// Exit a parse tree produced by ProgramaParser#simbolo.
+	exitSimbolo(ctx) {
+	}
+
+
 
 }

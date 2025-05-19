@@ -27,7 +27,7 @@ class Myvisitor extends ProgramaVisitor {
     }
 
     visitSalida(ctx) {
-        const texto = ctx.CADENA().getText();
+        const texto = ctx.CADENA().getText();//CADENA
         return () => console.log(texto.slice(1, -1)); // quitar comillas
     }
 
