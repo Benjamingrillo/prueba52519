@@ -38,4 +38,4 @@ npm start
 ## Comentarios adiccionales
 1. No es necesario el archivo input.txt es posible eliminarlo y el progrma seguira funcionando.
 
-Si lo elimina se le pedira en la terminal que ingresar una cadena
+    Si lo elimina se le pedira en la terminal que ingresar una cadena
