@@ -15,5 +15,21 @@ antlr4 -Dlanguage=JavaScript -o generated Programa.g4
 ```
 
 ## Instrucciones de uso
+1. Escribir un programa en el archivo input.txt, por ejemplo:
 ```sh
-Esta gramatica 
+repetir {
+  imprimir("Hola!");
+  imprimir("¿Cuánto es $21 + $23?");
+  salir;
+} hasta verdadero;
+ 
+```
+2. Ejecutar el intérprete:
+```sh
+npm start
+```
+3. Vera en la consola
+  -La tabla de tokens generados por el lexer.
+  -El árbol de derivación.
+  -La ejecución de las instrucciones definidas en el input.
+4. Para ver el parser tree Apretar F5
