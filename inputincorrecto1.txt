@@ -1,5 +1,6 @@
 repetir{
   imprimir("Hola!");
-  imprimir("¿Cuánto es 2 + 2?");
+  imprimir("¿Cuánto es 2$ + 10$?");
   salir;
 } hasta verdadero;
+# NO reconoce los simbolos "¿" y "$" 
