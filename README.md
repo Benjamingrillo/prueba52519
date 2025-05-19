@@ -38,4 +38,10 @@ npm start
 ## Comentarios adiccionales
 1. No es necesario el archivo input.txt es posible eliminarlo y el progrma seguira funcionando.
 
-    Si lo elimina se le pedira en la terminal que ingresar una cadena
+    Si lo elimina se le pedira en la terminal que ingresar una cadena para analizar
+   
+3. Si hay un error de sintaxis en la cadena ah anlizar el parser dará error y mostrara la tabla de lexemas y tokens con cada una de las letras como lexemas.
+![image](https://github.com/user-attachments/assets/e124857f-db9f-489a-a337-8161b6f63522)
+
+4. 
+5. 
