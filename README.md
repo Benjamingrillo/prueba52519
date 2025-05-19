@@ -30,8 +30,8 @@ npm start
 ```
 3. Vera en la consola
 
-  -La tabla de tokens generados por el lexer.
-  -El árbol de derivación.
-  -La ejecución de las instrucciones definidas en el input.
+   -La tabla de tokens generados por el lexer.
+   -El árbol de derivación.
+   -La ejecución de las instrucciones definidas en el input.
 
 4. Para ver el parser tree Apretar F5
