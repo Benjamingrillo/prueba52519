@@ -1,0 +1,4 @@
+repetir{
+  salir;
+} hasta verdadero;
+#Va hacia la sentencia terminar con un mensaje de "Saliendo del programa"

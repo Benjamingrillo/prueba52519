@@ -1,0 +1,5 @@
+repetir{
+  imprimir("Holaaa");
+  imprimir("Me llamo Benjamin");
+  salir;
+} hasta verdadero;
