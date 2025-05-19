@@ -5,7 +5,10 @@ Este proyecto implementa un lenguaje de programación simple utilizando ANTLR4. 
 ## Instalacion
 
 Clona este repositorio: git clone https://github.com/Benjamingrillo/52519.git
-
+Instalar dependencias necesarias
+```sh
+npm install
+```
 ## Instrucciones de uso
 ```sh
 Esta gramatica 
