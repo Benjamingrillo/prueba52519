@@ -1,6 +1,6 @@
 # Lenguaje.g4
 
-Este proyecto implementa un lenguaje de programación simple utilizando ANTLR4. Está diseñado con fines educativos para demostrar el proceso de análisis léxico, sintáctico y semántico. El lenguaje permite imprimir mensajes en consola, repetir instrucciones y finalizar la ejecución mediante una condición booleana.
+Este proyecto implementa un lenguaje de programación simple utilizando ANTLR4. Está diseñado para demostrar el proceso de análisis léxico, sintáctico y semántico. El lenguaje permite imprimir mensajes en consola, repetir instrucciones y finalizar la ejecución mediante una condición booleana.
 
 ## Instalacion
 
