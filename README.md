@@ -33,4 +33,5 @@ npm start
   -La tabla de tokens generados por el lexer.
   -El árbol de derivación.
   -La ejecución de las instrucciones definidas en el input.
-5. Para ver el parser tree Apretar F5
+
+4. Para ver el parser tree Apretar F5
