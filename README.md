@@ -37,6 +37,9 @@ npm start
 ![image](https://github.com/user-attachments/assets/eeb9b832-d533-425f-83d3-5312f6e1f447)
 
 4. Para ver el parser tree Apretar F5
+
+![image](https://github.com/user-attachments/assets/f04732ea-d440-46ec-ae4c-f2457e0794a3)
+
 ## Comentarios adiccionales
 1. No es necesario el archivo input.txt es posible eliminarlo y el progrma seguira funcionando.
 
@@ -46,5 +49,4 @@ npm start
 
 ![image](https://github.com/user-attachments/assets/e124857f-db9f-489a-a337-8161b6f63522)
 
-5. 
-6. 
+ 
